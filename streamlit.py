@@ -11,7 +11,7 @@ models = [
     "llama-3.2-3b-preview"
 ]
 
-BACKEND_URL = "http://backend:8000"
+BACKEND_URL = "https://postgresconnect-6514d47ebc67.herokuapp.com/"
 def connect_to_database(db, user, password, host, port):
     url = f"{BACKEND_URL}/connect"
     payload = {
