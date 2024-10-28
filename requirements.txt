@@ -1,0 +1,6 @@
+psycopg2
+groq
+uvicorn
+fastapi
+python-dotenv
+streamlit

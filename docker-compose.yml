@@ -1,0 +1,29 @@
+services:
+  frontend:
+    image: dockerfile.streamlit:latest
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    volumes:
+      - C:/Users/Bolu/Text_to_SQL:/app
+    restart: always
+    networks:
+      - app
+    container_name: frontend
+
+  backend:
+    image: dockerfile.fastapi:latest
+    ports:
+      - "5000:5000"
+    volumes:
+      - C:/Users/Bolu/Text_to_SQL:/app
+    restart: always
+    networks:
+      - app
+    container_name: backend
+
+networks:
+  app:
+    driver: bridge
+
