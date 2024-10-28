@@ -71,7 +71,7 @@ def generate_chat(question:str, selected_table:Union[str, List[str]], selected_s
 
 
 def receive_schema_data():
-    response = requests.get("http://backend:8000/send_schema")
+    response = requests.get(f"{BACKEND_URL}/send_schema")
     if response.status_code == 200:
         data = response.json()
         schemas = data.get("schemas", [])
